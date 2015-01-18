@@ -71,9 +71,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="VC0-RZ-NGk">
-                                <rect key="frame" x="487.5" y="20" width="96.5" height="40"/>
-                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC0-RZ-NGk">
+                                <rect key="frame" x="535.5" y="20" width="48.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detonation in" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNR-md-uGj">
+                                <rect key="frame" x="359" y="20" width="156.5" height="20"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -88,6 +94,7 @@
                             <constraint firstAttribute="bottom" secondItem="3sv-Qh-V0I" secondAttribute="bottom" id="EX4-0l-wfA"/>
                             <constraint firstItem="3sv-Qh-V0I" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Inn-8c-8qo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Jme-bE-5aB" secondAttribute="trailing" constant="10" id="JaF-Ru-C4i"/>
+                            <constraint firstItem="VC0-RZ-NGk" firstAttribute="leading" secondItem="aNR-md-uGj" secondAttribute="trailing" constant="20" id="OXh-Ya-rHN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VC0-RZ-NGk" secondAttribute="trailing" id="Tsc-lR-HMV"/>
                             <constraint firstItem="Anc-PD-kfm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Uc9-IF-fcC"/>
                             <constraint firstItem="8DI-qI-OI9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="Wge-YE-bzL"/>
@@ -95,14 +102,17 @@
                             <constraint firstItem="3sv-Qh-V0I" firstAttribute="top" secondItem="Jme-bE-5aB" secondAttribute="bottom" id="a9a-2m-2V8"/>
                             <constraint firstItem="T5I-ua-iuF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="aED-4O-IQj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3sv-Qh-V0I" secondAttribute="trailing" id="ggT-68-1mD"/>
+                            <constraint firstItem="3sv-Qh-V0I" firstAttribute="top" secondItem="aNR-md-uGj" secondAttribute="bottom" id="ibk-Gf-8Tb"/>
                             <constraint firstItem="Anc-PD-kfm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="j7m-tk-G0H"/>
                             <constraint firstItem="T5I-ua-iuF" firstAttribute="leading" secondItem="8DI-qI-OI9" secondAttribute="trailing" constant="50" id="kX6-7h-o30"/>
                             <constraint firstItem="T5I-ua-iuF" firstAttribute="top" secondItem="8DI-qI-OI9" secondAttribute="bottom" constant="50" id="nOi-Xr-Yc0"/>
+                            <constraint firstItem="aNR-md-uGj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="t91-DF-PLZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8DI-qI-OI9" secondAttribute="trailing" constant="40" id="ten-WU-gQo"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="a9a-2m-2V8"/>
+                                <exclude reference="ibk-Gf-8Tb"/>
                                 <exclude reference="kX6-7h-o30"/>
                                 <exclude reference="Acr-yZ-q6o"/>
                             </mask>

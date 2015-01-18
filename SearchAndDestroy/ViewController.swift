@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         if timer.valid {
             // Timer is still running
             timer.invalidate()
-            displayTimeLabel.text = "Fail"
+            displayTimeLabel.text = "--:--"
         }
     }
     
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         if timer.valid {
             // Timer is still running
             timer.invalidate()
-            displayTimeLabel.text = "Fail"
+            displayTimeLabel.text = "--:--"
         }
     }
     func arm() {
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         timerDetonator = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
         startTimeDetonator = NSDate.timeIntervalSinceReferenceDate()
         
-        let utterance = AVSpeechUtterance(string: "\(Settings.locationName) will detonate in 45 seconds.")
+        let utterance = AVSpeechUtterance(string: "\(Settings.locationName) will detonate in \(Settings.secondsToDetonate) seconds.")
         let synthesizer = AVSpeechSynthesizer()
         utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
         synthesizer.speakUtterance(utterance)
