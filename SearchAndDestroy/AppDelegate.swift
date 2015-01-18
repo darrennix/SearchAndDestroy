@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  SearchAndDestroy
-//
-//  Created by Darren Nix on 1/17/15.
-//  Copyright (c) 2015 Darren Nix. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
