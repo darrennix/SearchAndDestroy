@@ -1,19 +1,32 @@
 import UIKit
+import AVFoundation
+
 
 class ViewController: UIViewController {
     
     var startTime = NSTimeInterval()
     var timer = NSTimer()
     var countdownTime: Double = 0.0
+
+    var startTimeDetonator = NSTimeInterval()
+    var timerDetonator = NSTimer()
+    var countdownTimeDetonator: Double = 0.0
+
     var appState = "armable" // armable, arming, disarming, detonating
     
     @IBOutlet weak var displayTimeLabel: UILabel!
+    @IBOutlet weak var displayTimeDetonatorLabel: UILabel!
     @IBOutlet weak var armButton: UIButton!
     @IBOutlet weak var disarmButton: UIButton!
     
     @IBAction func armTouchDown(sender: AnyObject) {
         appState = "arming"
         startCountdown(Settings.secondsToArm)
+        
+        let string = "Arming \(Settings.locationName)."
+        let utterance = AVSpeechUtterance(string: string)
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speakUtterance(utterance)
     }
     @IBAction func armTouchUpInside(sender: AnyObject) {
         if timer.valid {
@@ -36,13 +49,22 @@ class ViewController: UIViewController {
     }
     func arm() {
         appState = "detonating"
-        startCountdown(Settings.secondsToDetonate)
         disarmButton.hidden = false
         armButton.hidden = true
+        displayTimeLabel.text = "--:--"
+
+        countdownTimeDetonator = Double(Settings.secondsToDetonate)
+        let aSelector : Selector = "updateTimeDetonator"
+        timerDetonator = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        startTimeDetonator = NSDate.timeIntervalSinceReferenceDate()
     }
     
     func disarm() {
+        displayTimeLabel.text = "--:--"
+        displayTimeDetonatorLabel.text = "--:--"
+
         appState = "initializing"
+        timerDetonator.invalidate()
         disarmButton.hidden = true
         armButton.hidden = false
     }
@@ -91,11 +113,36 @@ class ViewController: UIViewController {
         }
     }
 
+    func updateTimeDetonator() {
+        var elapsedTime: NSTimeInterval = NSDate.timeIntervalSinceReferenceDate() - startTimeDetonator
+        if (elapsedTime >= countdownTimeDetonator) {
+            timerDetonator.invalidate()
+            detonate()
+        } else {
+            var timeRemaining: NSTimeInterval = countdownTimeDetonator - elapsedTime
+            
+            //calculate the seconds in elapsed time.
+            let seconds = UInt8(timeRemaining)
+            timeRemaining -= NSTimeInterval(seconds)
+            
+            //find out the fraction of milliseconds to be displayed.
+            let fraction = UInt8(timeRemaining * 100)
+            
+            //add the leading zero for minutes, seconds and millseconds and store them as string constants
+            let strSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+            let strFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
+            
+            //concatenate seconds and milliseconds as assign it to the UILabel
+            displayTimeDetonatorLabel.text = "\(strSeconds):\(strFraction)"
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         displayTimeLabel.text = "--:--"
+        displayTimeDetonatorLabel.text = "--:--"
         disarmButton.hidden = true
     }
 
