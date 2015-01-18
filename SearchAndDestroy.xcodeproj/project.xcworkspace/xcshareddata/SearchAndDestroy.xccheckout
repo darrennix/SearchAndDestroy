@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8D94E44B-7380-44F5-8CBC-5E5607C9089E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SearchAndDestroy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2FC3F547AC6E6DD533E0A7F170A39108A0B00DA3</key>
+		<string>github.com:recreationist/SearchAndDestroy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SearchAndDestroy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2FC3F547AC6E6DD533E0A7F170A39108A0B00DA3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:recreationist/SearchAndDestroy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2FC3F547AC6E6DD533E0A7F170A39108A0B00DA3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2FC3F547AC6E6DD533E0A7F170A39108A0B00DA3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SearchAndDestroy</string>
+		</dict>
+	</array>
+</dict>
+</plist>

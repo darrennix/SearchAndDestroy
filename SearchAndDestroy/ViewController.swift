@@ -12,7 +12,9 @@ class ViewController: UIViewController {
     var countdownTimeDetonator: Double = 0.0
 
     var appState = "armable" // armable, arming, disarming, detonating
-    
+
+    let synthesizer = AVSpeechSynthesizer()
+
     @IBOutlet weak var displayTimeLabel: UILabel!
     @IBOutlet weak var displayTimeDetonatorLabel: UILabel!
     @IBOutlet weak var armButton: UIButton!
@@ -23,7 +25,6 @@ class ViewController: UIViewController {
         startCountdown(Settings.secondsToArm)
         
         let utterance = AVSpeechUtterance(string: "Arming \(Settings.locationName).")
-        let synthesizer = AVSpeechSynthesizer()
         utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
         synthesizer.speakUtterance(utterance)
     }
@@ -40,7 +41,6 @@ class ViewController: UIViewController {
         startCountdown(Settings.secondsToDisarm)
         
         let utterance = AVSpeechUtterance(string: "Disarming \(Settings.locationName).")
-        let synthesizer = AVSpeechSynthesizer()
         utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
         synthesizer.speakUtterance(utterance)
 
@@ -80,7 +80,6 @@ class ViewController: UIViewController {
         armButton.hidden = false
         
         let utterance = AVSpeechUtterance(string: "\(Settings.locationName) disarmed. ")
-        let synthesizer = AVSpeechSynthesizer()
         utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
         synthesizer.speakUtterance(utterance)
 
@@ -92,7 +91,6 @@ class ViewController: UIViewController {
         armButton.hidden = true
 
         let utterance = AVSpeechUtterance(string: "\(Settings.locationName) has detonated.  Game Over. ")
-        let synthesizer = AVSpeechSynthesizer()
         utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
         synthesizer.speakUtterance(utterance)
         

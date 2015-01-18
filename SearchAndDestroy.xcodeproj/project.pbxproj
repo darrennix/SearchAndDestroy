@@ -413,6 +413,7 @@
 				E2F2C6941A6B2BF700ED306C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2F2C6951A6B2BF700ED306C /* Build configuration list for PBXNativeTarget "SearchAndDestroyTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +422,7 @@
 				E2F2C6971A6B2BF700ED306C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
