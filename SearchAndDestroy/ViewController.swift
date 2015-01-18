@@ -1,7 +1,6 @@
 import UIKit
 import AVFoundation
 
-
 class ViewController: UIViewController {
     
     var startTime = NSTimeInterval()
@@ -23,9 +22,9 @@ class ViewController: UIViewController {
         appState = "arming"
         startCountdown(Settings.secondsToArm)
         
-        let string = "Arming \(Settings.locationName)."
-        let utterance = AVSpeechUtterance(string: string)
+        let utterance = AVSpeechUtterance(string: "Arming \(Settings.locationName).")
         let synthesizer = AVSpeechSynthesizer()
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
         synthesizer.speakUtterance(utterance)
     }
     @IBAction func armTouchUpInside(sender: AnyObject) {
@@ -39,6 +38,12 @@ class ViewController: UIViewController {
     @IBAction func disarmTouchDown(sender: AnyObject) {
         appState = "disarming"
         startCountdown(Settings.secondsToDisarm)
+        
+        let utterance = AVSpeechUtterance(string: "Disarming \(Settings.locationName).")
+        let synthesizer = AVSpeechSynthesizer()
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
+        synthesizer.speakUtterance(utterance)
+
     }
     @IBAction func disarmTouchUpInside(sender: AnyObject) {
         if timer.valid {
@@ -57,6 +62,12 @@ class ViewController: UIViewController {
         let aSelector : Selector = "updateTimeDetonator"
         timerDetonator = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
         startTimeDetonator = NSDate.timeIntervalSinceReferenceDate()
+        
+        let utterance = AVSpeechUtterance(string: "\(Settings.locationName) will detonate in 45 seconds.")
+        let synthesizer = AVSpeechSynthesizer()
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
+        synthesizer.speakUtterance(utterance)
+
     }
     
     func disarm() {
@@ -67,12 +78,24 @@ class ViewController: UIViewController {
         timerDetonator.invalidate()
         disarmButton.hidden = true
         armButton.hidden = false
+        
+        let utterance = AVSpeechUtterance(string: "\(Settings.locationName) disarmed. ")
+        let synthesizer = AVSpeechSynthesizer()
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
+        synthesizer.speakUtterance(utterance)
+
     }
     
     func detonate() {
         displayTimeLabel.text = "Boom"
         disarmButton.hidden = true
         armButton.hidden = true
+
+        let utterance = AVSpeechUtterance(string: "\(Settings.locationName) has detonated.  Game Over. ")
+        let synthesizer = AVSpeechSynthesizer()
+        utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
+        synthesizer.speakUtterance(utterance)
+        
     }
     
     func startCountdown(seconds: Int) {
