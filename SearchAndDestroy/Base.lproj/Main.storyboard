@@ -131,8 +131,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-oa-uYb">
-                                <rect key="frame" x="37" y="28" width="93" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zf-oa-uYb">
+                                <rect key="frame" x="59" y="28" width="93" height="30"/>
                                 <state key="normal" title="Save settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -141,47 +141,47 @@
                                     <segue destination="vXZ-lx-hvc" kind="show" id="mAe-4N-c7V"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Seconds to arm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A60-MM-9pH">
-                                <rect key="frame" x="37" y="82" width="122" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds to arm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A60-MM-9pH">
+                                <rect key="frame" x="59" y="82" width="122" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lds-S9-hKD">
-                                <rect key="frame" x="37" y="188" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lds-S9-hKD">
+                                <rect key="frame" x="59" y="187" width="325" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Seconds to disarm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHS-uv-leC">
-                                <rect key="frame" x="37" y="159" width="145" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds to disarm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHS-uv-leC">
+                                <rect key="frame" x="59" y="158" width="144.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-R5-OXE">
-                                <rect key="frame" x="37" y="268" width="97" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds to detonate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg0-pE-ysB">
+                                <rect key="frame" x="59" y="238" width="160.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RuF-bZ-Lei">
+                                <rect key="frame" x="59" y="347.5" width="515" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Seconds to detonate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg0-pE-ysB">
-                                <rect key="frame" x="37" y="239" width="161" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6Q-j7-a3c">
+                                <rect key="frame" x="59" y="318.5" width="114" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RuF-bZ-Lei">
-                                <rect key="frame" x="37" y="349" width="218" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTJ-JE-F0B">
+                                <rect key="frame" x="59" y="110" width="325" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6Q-j7-a3c">
-                                <rect key="frame" x="37" y="320" width="114" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTJ-JE-F0B">
-                                <rect key="frame" x="37" y="111" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-R5-OXE">
+                                <rect key="frame" x="59" y="266.5" width="325" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -190,13 +190,26 @@
                         <constraints>
                             <constraint firstItem="Lds-S9-hKD" firstAttribute="top" secondItem="XHS-uv-leC" secondAttribute="bottom" constant="8" id="1mY-I4-NZp"/>
                             <constraint firstItem="A60-MM-9pH" firstAttribute="top" secondItem="5zf-oa-uYb" secondAttribute="bottom" constant="24" id="3fR-JG-MWF"/>
+                            <constraint firstItem="XHS-uv-leC" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="7N2-Sn-TMy"/>
                             <constraint firstItem="XHS-uv-leC" firstAttribute="top" secondItem="gTJ-JE-F0B" secondAttribute="bottom" constant="18" id="9wO-OV-a8D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hUI-R5-OXE" secondAttribute="trailing" constant="200" id="Awd-Nu-zG6"/>
                             <constraint firstItem="gTJ-JE-F0B" firstAttribute="top" secondItem="A60-MM-9pH" secondAttribute="bottom" constant="8" id="Cwz-d7-yyC"/>
+                            <constraint firstItem="5zf-oa-uYb" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="DiB-gR-srd"/>
+                            <constraint firstItem="RuF-bZ-Lei" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="Dyg-DI-RtU"/>
                             <constraint firstItem="hUI-R5-OXE" firstAttribute="top" secondItem="xg0-pE-ysB" secondAttribute="bottom" constant="8" id="HfK-gW-jo5"/>
+                            <constraint firstItem="Lds-S9-hKD" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="PeR-Kx-9C3"/>
+                            <constraint firstItem="K6Q-j7-a3c" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="Sgw-Y5-uL5"/>
+                            <constraint firstItem="gTJ-JE-F0B" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="ZIi-gC-sLo"/>
                             <constraint firstItem="RuF-bZ-Lei" firstAttribute="top" secondItem="K6Q-j7-a3c" secondAttribute="bottom" constant="8" id="ZsC-Qx-anm"/>
                             <constraint firstItem="K6Q-j7-a3c" firstAttribute="top" secondItem="hUI-R5-OXE" secondAttribute="bottom" constant="22" id="dID-6A-C7q"/>
                             <constraint firstItem="xg0-pE-ysB" firstAttribute="top" secondItem="Lds-S9-hKD" secondAttribute="bottom" constant="21" id="e73-z2-U9X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gTJ-JE-F0B" secondAttribute="trailing" constant="200" id="eub-j0-nsR"/>
                             <constraint firstItem="5zf-oa-uYb" firstAttribute="top" secondItem="7o0-LO-mcT" secondAttribute="bottom" constant="8" id="kP2-Dn-OHr"/>
+                            <constraint firstItem="A60-MM-9pH" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="kod-yC-j7i"/>
+                            <constraint firstItem="hUI-R5-OXE" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="sA8-wH-RtM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lds-S9-hKD" secondAttribute="trailing" constant="200" id="v1Z-oE-FUn"/>
+                            <constraint firstItem="xg0-pE-ysB" firstAttribute="leading" secondItem="sMJ-Hs-5xl" secondAttribute="leadingMargin" constant="43" id="yH7-fq-38e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RuF-bZ-Lei" secondAttribute="trailing" constant="10" id="zCB-vL-lBy"/>
                         </constraints>
                     </view>
                     <connections>
