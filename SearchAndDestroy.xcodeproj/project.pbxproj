@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E27AFEB81A6CA27A008AF046 /* 20-sec-countdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E27AFEB71A6CA27A008AF046 /* 20-sec-countdown.mp3 */; };
 		E2F2C6791A6B2BF700ED306C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F2C6781A6B2BF700ED306C /* AppDelegate.swift */; };
 		E2F2C67B1A6B2BF700ED306C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F2C67A1A6B2BF700ED306C /* ViewController.swift */; };
 		E2F2C67E1A6B2BF700ED306C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F2C67C1A6B2BF700ED306C /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E27AFEB71A6CA27A008AF046 /* 20-sec-countdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "20-sec-countdown.mp3"; sourceTree = "<group>"; };
 		E2F2C6731A6B2BF700ED306C /* SearchAndDestroy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchAndDestroy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F2C6771A6B2BF700ED306C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2F2C6781A6B2BF700ED306C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				E2F2C67C1A6B2BF700ED306C /* Main.storyboard */,
 				E2F2C69A1A6B2F5E00ED306C /* Settings.swift */,
 				E2F2C67F1A6B2BF700ED306C /* Images.xcassets */,
+				E27AFEB71A6CA27A008AF046 /* 20-sec-countdown.mp3 */,
 				E2F2C6811A6B2BF700ED306C /* LaunchScreen.xib */,
 				E2F2C6761A6B2BF700ED306C /* Supporting Files */,
 			);
@@ -200,6 +203,7 @@
 			files = (
 				E2F2C67E1A6B2BF700ED306C /* Main.storyboard in Resources */,
 				E2F2C6831A6B2BF700ED306C /* LaunchScreen.xib in Resources */,
+				E27AFEB81A6CA27A008AF046 /* 20-sec-countdown.mp3 in Resources */,
 				E2F2C6801A6B2BF700ED306C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SearchAndDestroy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,7 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SearchAndDestroy/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
