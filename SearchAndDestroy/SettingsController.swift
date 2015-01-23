@@ -22,6 +22,8 @@ class SettingsController: UIViewController {
         if secondsToDetonateInt != nil {
             Settings.secondsToDetonate = secondsToDetonateInt!
         }
+        
+        Settings.locationName = locationName.text
     }
 
     override func viewDidLoad() {
@@ -32,8 +34,6 @@ class SettingsController: UIViewController {
         secondsToDetonate.text = String(Settings.secondsToDetonate)
         locationName.text = Settings.locationName
  
-//        super.viewDidLoad()
-        
         let tapRecognizer = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
         tapRecognizer.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tapRecognizer)

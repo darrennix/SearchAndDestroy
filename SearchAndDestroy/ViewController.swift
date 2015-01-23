@@ -6,22 +6,23 @@ class ViewController: UIViewController {
     var startTime = NSTimeInterval()
     var timer = NSTimer()
     var countdownTime: Double = 0.0
-
     var startTimeDetonator = NSTimeInterval()
     var timerDetonator = NSTimer()
     var countdownTimeDetonator: Double = 0.0
-
     var appState = "armable" // armable, arming, disarming, detonating
-
     let synthesizer = AVSpeechSynthesizer()
     var countdownPlayer = AVAudioPlayer()
 
-
     @IBOutlet weak var displayTimeLabel: UILabel!
     @IBOutlet weak var displayTimeDetonatorLabel: UILabel!
+    @IBOutlet weak var detonatorLabel: UILabel!
     @IBOutlet weak var armButton: UIButton!
     @IBOutlet weak var disarmButton: UIButton!
-    
+    @IBOutlet weak var newGameButton: UIButton!
+
+    @IBAction func newGameTouchUpInside(sender: AnyObject) {
+    }
+
     @IBAction func armTouchDown(sender: AnyObject) {
         appState = "arming"
         startCountdown(Settings.secondsToArm)
@@ -90,14 +91,17 @@ class ViewController: UIViewController {
     }
     
     func detonate() {
-        displayTimeLabel.text = "Boom"
+        newGameButton.hidden = false
+        
+        displayTimeLabel.hidden = true
         disarmButton.hidden = true
         armButton.hidden = true
+        displayTimeLabel.hidden = true
+        displayTimeDetonatorLabel.hidden = true
+        detonatorLabel.hidden = true
 
-//        let utterance = AVSpeechUtterance(string: "\(Settings.locationName) has detonated.  Game Over. ")
-//        utterance.rate = AVSpeechUtteranceMinimumSpeechRate; // some Configs :-)
-//        synthesizer.speakUtterance(utterance)
-        
+        // Just in case someone is trying to disarm
+        timer.invalidate()
     }
     
     func startCountdown(seconds: Int) {
@@ -176,6 +180,7 @@ class ViewController: UIViewController {
         displayTimeLabel.text = "--:--"
         displayTimeDetonatorLabel.text = "--:--"
         disarmButton.hidden = true
+        newGameButton.hidden = true
         
         let path = NSBundle.mainBundle().pathForResource("20-sec-countdown", ofType:"mp3")
         let fileURL = NSURL(fileURLWithPath: path!)
