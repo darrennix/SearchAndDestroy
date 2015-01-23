@@ -2,6 +2,7 @@ import UIKit
 
 class SettingsController: UIViewController {
     
+    
     @IBOutlet weak var secondsToArm: UITextField!
     @IBOutlet weak var secondsToDisarm: UITextField!
     @IBOutlet weak var secondsToDetonate: UITextField!
@@ -22,7 +23,7 @@ class SettingsController: UIViewController {
             Settings.secondsToDetonate = secondsToDetonateInt!
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +31,19 @@ class SettingsController: UIViewController {
         secondsToDisarm.text = String(Settings.secondsToDisarm)
         secondsToDetonate.text = String(Settings.secondsToDetonate)
         locationName.text = Settings.locationName
+ 
+//        super.viewDidLoad()
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: "handleSingleTap:")
+        tapRecognizer.numberOfTapsRequired = 1
+        self.view.addGestureRecognizer(tapRecognizer)
     }
+
+    func handleSingleTap(recognizer: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
