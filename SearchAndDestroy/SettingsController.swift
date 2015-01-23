@@ -29,6 +29,7 @@ class SettingsController: UIViewController {
         secondsToArm.text = String(Settings.secondsToArm)
         secondsToDisarm.text = String(Settings.secondsToDisarm)
         secondsToDetonate.text = String(Settings.secondsToDetonate)
+        locationName.text = Settings.locationName
     }
     
     override func didReceiveMemoryWarning() {
